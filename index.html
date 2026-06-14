@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subrata Driving</title>
 </head>
-<body id="appBody" style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center; transition: background 0.5s ease;">
+<body id="appBody" style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center; transition: all 0.5s ease;">
 
     <div style="background: rgba(0, 0, 0, 0.9); border-bottom: 3px solid #FF6600; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
         <div style="font-size: 20px; font-weight: bold; color: cyan; text-shadow: 0 0 5px cyan;">🚗 SD App</div>
@@ -19,7 +19,7 @@
 
     <div style="margin-top: 40px; display: inline-block;">
         <img src="11.png" alt="Car" style="width: 100px; height: auto; display: block; margin: 0 auto 10px auto;">
-        <h1 style="font-size: 45px; color: cyan; margin: 0; text-shadow: 0 0 20px cyan, 0 0 40px #FF6600;">
+        <h1 id="mainTitle" style="font-size: 45px; color: cyan; margin: 0; text-shadow: 0 0 20px cyan, 0 0 40px #FF6600; transition: all 0.5s ease;">
             🚗Subrata Driving🚗
         </h1>
     </div>
@@ -30,16 +30,16 @@
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 40px auto; padding: 0 20px; box-sizing: border-box;">
         
-        <div style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid #FF6600; box-shadow: 0 0 15px #FF6600; padding: 30px 20px; border-radius: 20px; box-sizing: border-box;">
-            <h2 style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">📊 15 DAYS COURSE</h2>
+        <div id="courseBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid #FF6600; box-shadow: 0 0 15px #FF6600; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
+            <h2 id="courseTitle" style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">📊 15 DAYS COURSE</h2>
             <p style="font-size: 24px; margin: 15px 0;">Regular Fees: <span style="text-decoration: line-through; color: red;">₹4500</span></p>
             <p style="font-size: 20px; font-weight: bold; margin: 5px 0;">Special Offer:</p>
             <p style="font-size: 38px; color: lime; font-weight: bold; margin: 0; text-shadow: 0 0 15px lime;">Only ₹4000!</p>
-            <p style="font-size: 28px; color: cyan; font-weight: bold; margin: 15px 0 0 0; text-shadow: 0 0 10px cyan;">DAILY BASIS: Only ₹399 /Day! </p>
+            <p id="dailyRate" style="font-size: 28px; color: cyan; font-weight: bold; margin: 15px 0 0 0; text-shadow: 0 0 10px cyan;">DAILY BASIS: Only ₹399 /Day! </p>
         </div>
         
-        <div style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid cyan; box-shadow: 0 0 15px cyan; padding: 30px 20px; border-radius: 20px; box-sizing: border-box;">
-            <h2 style="color: lime; margin-top: 0; text-shadow: 0 0 5px lime;">📞 Contact Us</h2>
+        <div id="contactBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid cyan; box-shadow: 0 0 15px cyan; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
+            <h2 id="contactTitle" style="color: lime; margin-top: 0; text-shadow: 0 0 5px lime;">📞 Contact Us</h2>
             
             <a href="https://wa.me/918420478930" target="_blank" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: darkgreen; border: 1px solid lime; box-shadow: 0 0 8px lime;">
                 🟢 Chat on WhatsApp
@@ -65,24 +65,22 @@
         <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-shadow: 0 0 8px #ff4500; text-transform: uppercase;">⚠️ Important Notice ⚠️</h3>
         <p style="font-size: 18px; color: white; font-weight: bold; margin: 10px 0;">You can learn driving only if you have your own car.</p>
         <p style="font-size: 17px; color: #00ffff; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px #00ffff;">আপনার নিজের গাড়ি থাকলেই কেবল আপনি ড্রাইভিং শিখতে পারবেন।</p>
-        <p style="font-size: 17px; color: lime; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px lime;">यदि आपके पास अपनी कार है तभी आप ड्राइविंग सीख सकते हैं।</p>
+        <p style="font-size: 17px; color: lime; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px lime;">यदि आपके पास अपनी कार है तभी आप driving सीख सकते हैं।</p>
     </div>
 
     <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; box-sizing: border-box;">
-        
         <div id="about" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed cyan; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
             <h3 style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">ℹ️ About Subrata Driving</h3>
-            <p style="font-size: 15px; line-height: 1.6; color: #ddd;">Welcome to Subrata Driving School, located at Ruby Park, Kolkata! We provide premium quality 15-day personal driving courses tailored to build your confidence on the road. Our mission is to train you safely using your own vehicle under expert supervision.</p>
+            <p style="font-size: 15px; line-height: 1.6; color: #ddd;">Welcome to Subrata Driving School, located at Ruby Park, Kolkata! We provide premium quality 15-day personal driving courses tailored to build your confidence on the road.</p>
         </div>
-
+        
         <div id="privacy" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed #FF6600; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
-            <h3 style="color: #FF6600; margin-top: 0; text-shadow: 0 0 5px #FF6600;">🔒 Privacy Policy</h3>
-            <p style="font-size: 14px; line-height: 1.6; color: #ddd;">Your privacy is extremely important to us. This application runs 100% locally and offline. We do NOT collect, store, or share any personal information, location, or device data. All phone calls and WhatsApp chats are directly handled by your native apps securely.</p>
+            <h3 style="color: #FF6600; margin-top: 0; text-shadow: 0 0 5px #FF6600;">🔒 Website Privacy Policy</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #ddd;">This Privacy Policy applies to our official web platform <strong>s.dnc.su</strong>. We respect your privacy and state that this website does NOT track users, use cookies, or request any personal data. It is a secure, informational landing page created by Shubhomoy to connect clients directly via secure call and WhatsApp protocols.</p>
         </div>
-
     </div>
 
-    <div style="margin-top: 50px; padding: 30px 10px; background: rgba(0,0,0,0.9); border-top: 5px solid #FF6600; box-shadow: 0 -5px 15px #FF6600;">
+    <div id="appFooter" style="margin-top: 50px; padding: 30px 10px; background: rgba(0,0,0,0.9); border-top: 5px solid #FF6600; box-shadow: 0 -5px 15px #FF6600; transition: all 0.5s ease;">
         <span style="font-size: 13px; color: deepskyblue; letter-spacing: 2px; font-weight: bold; text-transform: uppercase; text-shadow: 0 0 5px deepskyblue;">
             This Web Developed by Shubhomoy (sg)
         </span>
@@ -91,21 +89,57 @@
     <audio id="welcomeSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
 
 <script>
-    // থিম চেঞ্জ করার গোপন জাভাস্ক্রিপ্ট ম্যাজিক ভাই
-    let darkTheme = true;
+    let currentThemeIndex = 0;
     function toggleTheme() {
         const body = document.getElementById('appBody');
-        if (darkTheme) {
-            // লাইট থিম মোড (অরেঞ্জ ভাইব)
-            body.style.backgroundImage = "none";
-            body.style.backgroundColor = "#1a1a2e"; 
-            alert("Dark-Neon Theme Activated!");
-            darkTheme = false;
-        } else {
-            // অরিজিনাল থিম মোড
+        const mainTitle = document.getElementById('mainTitle');
+        const courseBox = document.getElementById('courseBox');
+        const contactBox = document.getElementById('contactBox');
+        const footer = document.getElementById('appFooter');
+        
+        currentThemeIndex = (currentThemeIndex + 1) % 4;
+
+        if (currentThemeIndex === 0) {
             body.style.backgroundImage = "url('A.jpg')";
-            alert("Original Background Theme Activated!");
-            darkTheme = true;
+            body.style.backgroundColor = "transparent";
+            mainTitle.style.textShadow = "0 0 20px cyan, 0 0 40px #FF6600";
+            courseBox.style.border = "3px solid #FF6600";
+            courseBox.style.boxShadow = "0 0 15px #FF6600";
+            contactBox.style.border = "3px solid cyan";
+            contactBox.style.boxShadow = "0 0 15px cyan";
+            footer.style.borderTop = "5px solid #FF6600";
+            footer.style.boxShadow = "0 -5px 15px #FF6600";
+            alert("Theme 1: Original Background!");
+        } else if (currentThemeIndex === 1) {
+            body.style.backgroundImage = "none";
+            body.style.backgroundColor = "#0b0c10";
+            mainTitle.style.color = "cyan";
+            mainTitle.style.textShadow = "0 0 15px cyan, 0 0 30px #FF6600";
+            alert("Theme 2: Cyberpunk Dark Neon!");
+        } else if (currentThemeIndex === 2) {
+            body.style.backgroundImage = "none";
+            body.style.backgroundColor = "#000000";
+            mainTitle.style.color = "#00FF00";
+            mainTitle.style.textShadow = "0 0 15px #00FF00";
+            courseBox.style.border = "3px solid #00FF00";
+            courseBox.style.boxShadow = "0 0 15px #00FF00";
+            contactBox.style.border = "3px solid #00FF00";
+            contactBox.style.boxShadow = "0 0 15px #00FF00";
+            footer.style.borderTop = "5px solid #00FF00";
+            footer.style.boxShadow = "0 -5px 15px #00FF00";
+            alert("Theme 3: Matrix Hacker Green!");
+        } else if (currentThemeIndex === 3) {
+            body.style.backgroundImage = "none";
+            body.style.backgroundColor = "#1a1c2e";
+            mainTitle.style.color = "#FFD700";
+            mainTitle.style.textShadow = "0 0 15px #FFD700";
+            courseBox.style.border = "3px solid #FFD700";
+            courseBox.style.boxShadow = "0 0 15px #FFD700";
+            contactBox.style.border = "3px solid #FFD700";
+            contactBox.style.boxShadow = "0 0 15px #FFD700";
+            footer.style.borderTop = "5px solid #FFD700";
+            footer.style.boxShadow = "0 -5px 15px #FFD700";
+            alert("Theme 4: Royal Golden Blue!");
         }
     }
 
