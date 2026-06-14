@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subrata Driving</title>
 </head>
-<body style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center;">
+<body id="appBody" style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center; transition: background 0.5s ease;">
 
-    <div style="margin-top: 50px; display: inline-block;">
+    <div style="background: rgba(0, 0, 0, 0.9); border-bottom: 3px solid #FF6600; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
+        <div style="font-size: 20px; font-weight: bold; color: cyan; text-shadow: 0 0 5px cyan;">🚗 SD App</div>
+        <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+            <a href="#about" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">About</a>
+            <a href="#privacy" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Privacy</a>
+            <button onclick="toggleTheme()" style="background: #FF6600; color: white; border: none; padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 0 8px #FF6600;">🎨 Change Theme</button>
+            <a href="https://github.com/s07114587-ops/subratadriving/releases" target="_blank" style="background: lime; color: black; text-decoration: none; padding: 6px 12px; border-radius: 5px; font-weight: bold; font-size: 13px; box-shadow: 0 0 8px lime;">📥 Download APK</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; display: inline-block;">
         <img src="11.png" alt="Car" style="width: 100px; height: auto; display: block; margin: 0 auto 10px auto;">
         <h1 style="font-size: 45px; color: cyan; margin: 0; text-shadow: 0 0 20px cyan, 0 0 40px #FF6600;">
             🚗Subrata Driving🚗
@@ -58,6 +68,20 @@
         <p style="font-size: 17px; color: lime; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px lime;">यदि आपके पास अपनी कार है तभी आप ड्राइविंग सीख सकते हैं।</p>
     </div>
 
+    <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; box-sizing: border-box;">
+        
+        <div id="about" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed cyan; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
+            <h3 style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">ℹ️ About Subrata Driving</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #ddd;">Welcome to Subrata Driving School, located at Ruby Park, Kolkata! We provide premium quality 15-day personal driving courses tailored to build your confidence on the road. Our mission is to train you safely using your own vehicle under expert supervision.</p>
+        </div>
+
+        <div id="privacy" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed #FF6600; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
+            <h3 style="color: #FF6600; margin-top: 0; text-shadow: 0 0 5px #FF6600;">🔒 Privacy Policy</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #ddd;">Your privacy is extremely important to us. This application runs 100% locally and offline. We do NOT collect, store, or share any personal information, location, or device data. All phone calls and WhatsApp chats are directly handled by your native apps securely.</p>
+        </div>
+
+    </div>
+
     <div style="margin-top: 50px; padding: 30px 10px; background: rgba(0,0,0,0.9); border-top: 5px solid #FF6600; box-shadow: 0 -5px 15px #FF6600;">
         <span style="font-size: 13px; color: deepskyblue; letter-spacing: 2px; font-weight: bold; text-transform: uppercase; text-shadow: 0 0 5px deepskyblue;">
             This Web Developed by Shubhomoy (sg)
@@ -67,6 +91,24 @@
     <audio id="welcomeSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
 
 <script>
+    // থিম চেঞ্জ করার গোপন জাভাস্ক্রিপ্ট ম্যাজিক ভাই
+    let darkTheme = true;
+    function toggleTheme() {
+        const body = document.getElementById('appBody');
+        if (darkTheme) {
+            // লাইট থিম মোড (অরেঞ্জ ভাইব)
+            body.style.backgroundImage = "none";
+            body.style.backgroundColor = "#1a1a2e"; 
+            alert("Dark-Neon Theme Activated!");
+            darkTheme = false;
+        } else {
+            // অরিজিনাল থিম মোড
+            body.style.backgroundImage = "url('A.jpg')";
+            alert("Original Background Theme Activated!");
+            darkTheme = true;
+        }
+    }
+
     function playWelcomeSound() {
         var audio = document.getElementById('welcomeSound');
         audio.play().then(function() {
