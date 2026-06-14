@@ -1,90 +1,95 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="512x512" href="your-favicon-512.png">
     <link rel="apple-touch-icon" sizes="512x512" href="your-favicon-512.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Subrata Driving School - Premium Driving Courses in Ruby Park, Kolkata">
     <title>Subrata Driving</title>
 </head>
 <body id="appBody" style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center; transition: all 0.5s ease;">
 
-    <div style="background: rgba(0, 0, 0, 0.9); border-bottom: 3px solid #FF6600; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
-        <div style="font-size: 20px; font-weight: bold; color: cyan; text-shadow: 0 0 5px cyan;">🚗 SD App</div>
-        <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
-            <a href="#about" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">About</a>
-            <a href="#privacy" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Privacy</a>
-            <button onclick="toggleTheme()" style="background: #FF6600; color: white; border: none; padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 0 8px #FF6600;">🎨 Change Theme</button>
-            <a href="https://github.com/s07114587-ops/subratadriving/releases" target="_blank" style="background: lime; color: black; text-decoration: none; padding: 6px 12px; border-radius: 5px; font-weight: bold; font-size: 13px; box-shadow: 0 0 8px lime;">📥 Download APK</a>
-        </div>
-    </div>
+    <header style="background: rgba(0, 0, 0, 0.95); border-bottom: 3px solid #FF6600; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);">
+        <div style="font-size: 20px; font-weight: bold; color: #00ffff; text-shadow: 0 0 5px #00ffff;">🚗 SD App</div>
+        <nav style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+            <a href="#about" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px; padding: 5px;">About</a>
+            <a href="#privacy" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px; padding: 5px;">Privacy</a>
+            <button onclick="toggleTheme()" aria-label="Change Website Theme" style="background: #FF6600; color: white; border: none; padding: 8px 14px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 13px; box-shadow: 0 0 8px #FF6600;">🎨 Change Theme</button>
+            <a href="https://github.com/s07114587-ops/subratadriving/releases" target="_blank" aria-label="Download APK from GitHub" style="background: #00FF00; color: black; text-decoration: none; padding: 8px 14px; border-radius: 5px; font-weight: bold; font-size: 13px; box-shadow: 0 0 8px #00FF00;">📥 Download APK</a>
+        </nav>
+    </header>
 
-    <div style="margin-top: 40px; display: inline-block;">
-        <img src="11.png" alt="Car" style="width: 100px; height: auto; display: block; margin: 0 auto 10px auto;">
-        <h1 id="mainTitle" style="font-size: 45px; color: cyan; margin: 0; text-shadow: 0 0 20px cyan, 0 0 40px #FF6600; transition: all 0.5s ease;">
-            🚗Subrata Driving🚗
-        </h1>
-    </div>
-    
-    <p style="font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px black; color: deepskyblue; margin-top: 10px;">P-30 Ruby Park, Kolkata</p>
-
-    <hr style="width: 80%; border: 1px solid cyan; box-shadow: 0 0 10px cyan; margin: 30px auto;">
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 40px auto; padding: 0 20px; box-sizing: border-box;">
-        
-        <div id="courseBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid #FF6600; box-shadow: 0 0 15px #FF6600; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
-            <h2 id="courseTitle" style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">📊 15 DAYS COURSE</h2>
-            <p style="font-size: 24px; margin: 15px 0;">Regular Fees: <span style="text-decoration: line-through; color: red;">₹4500</span></p>
-            <p style="font-size: 20px; font-weight: bold; margin: 5px 0;">Special Offer:</p>
-            <p style="font-size: 38px; color: lime; font-weight: bold; margin: 0; text-shadow: 0 0 15px lime;">Only ₹4000!</p>
-            <p id="dailyRate" style="font-size: 28px; color: cyan; font-weight: bold; margin: 15px 0 0 0; text-shadow: 0 0 10px cyan;">DAILY BASIS: Only ₹399 /Day! </p>
+    <main>
+        <div style="margin-top: 40px; display: inline-block;">
+            <img src="11.png" alt="Subrata Driving School Logo Car" style="width: 100px; height: auto; display: block; margin: 0 auto 10px auto;">
+            <h1 id="mainTitle" style="font-size: 45px; color: #00ffff; margin: 0; text-shadow: 0 0 20px #00ffff, 0 0 40px #FF6600; transition: all 0.5s ease;">
+                🚗Subrata Driving🚗
+            </h1>
         </div>
         
-        <div id="contactBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 3px solid cyan; box-shadow: 0 0 15px cyan; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
-            <h2 id="contactTitle" style="color: lime; margin-top: 0; text-shadow: 0 0 5px lime;">📞 Contact Us</h2>
+        <p style="font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px black; color: #00bfff; margin-top: 10px;">P-30 Ruby Park, Kolkata</p>
+
+        <hr style="width: 80%; border: 1px solid #00ffff; box-shadow: 0 0 10px #00ffff; margin: 30px auto;">
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1100px; margin: 40px auto; padding: 0 20px; box-sizing: border-box;">
             
-            <a href="https://wa.me/918420478930" target="_blank" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: darkgreen; border: 1px solid lime; box-shadow: 0 0 8px lime;">
-                🟢 Chat on WhatsApp
-            </a>
+            <section id="courseBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 3px solid #FF6600; box-shadow: 0 0 15px #FF6600; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
+                <h2 id="courseTitle" style="color: #00ffff; margin-top: 0; text-shadow: 0 0 5px #00ffff;">📊 15 DAYS COURSE</h2>
+                <p style="font-size: 24px; margin: 15px 0;">Regular Fees: <span style="text-decoration: line-through; color: #ff3333;">₹4500</span></p>
+                <p style="font-size: 20px; font-weight: bold; margin: 5px 0;">Special Offer:</p>
+                <p style="font-size: 38px; color: #00ff00; font-weight: bold; margin: 0; text-shadow: 0 0 15px #00ff00;">Only ₹4000!</p>
+                <p id="dailyRate" style="font-size: 28px; color: #00ffff; font-weight: bold; margin: 15px 0 0 0; text-shadow: 0 0 10px #00ffff;">DAILY BASIS: Only ₹399 /Day! </p>
+            </section>
             
-            <a href="tel:8420478930" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: darkblue; border: 1px solid dodgerblue; box-shadow: 0 0 8px dodgerblue;">
-                🔵 Call: 8420478930
-            </a>
+            <section id="contactBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 3px solid #00ffff; box-shadow: 0 0 15px #00ffff; padding: 30px 20px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
+                <h2 id="contactTitle" style="color: #00ff00; margin-top: 0; text-shadow: 0 0 5px #00ff00;">📞 Contact Us</h2>
+                
+                <a href="https://wa.me/918420478930" target="_blank" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: #006400; border: 1px solid #00ff00; box-shadow: 0 0 8px #00ff00;">
+                    🟢 Chat on WhatsApp
+                </a>
+                
+                <a href="tel:8420478930" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: #00008b; border: 1px solid #1e90ff; box-shadow: 0 0 8px #1e90ff;">
+                    🔵 Call: 8420478930
+                </a>
 
-            <a href="tel:8910682016" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: midnightblue; border: 1px solid deepskyblue; box-shadow: 0 0 8px deepskyblue;">
-                🔵 Call: 8910682016
-            </a>
+                <a href="tel:8910682016" style="display: block; color: white; text-decoration: none; padding: 15px; margin: 10px auto; border-radius: 10px; font-weight: bold; font-size: 18px; background: #191970; border: 1px solid #00bfff; box-shadow: 0 0 8px #00bfff;">
+                    🔵 Call: 8910682016
+                </a>
+                
+                <div style="margin-top: 20px; border-top: 1px dashed #00ffff; padding-top: 15px;">
+                    <span style="color: #00bfff; font-size: 16px; font-weight: bold; display: block; margin-bottom: 10px; text-shadow: 0 0 5px #00bfff;">👇 Click & See QR to Pay Fees 👇</span>
+                    <img src="B.jpg" alt="Paytm QR Code for Subrata Driving School" style="width: 100%; max-width: 175px; height: auto; background: white; padding: 8px; border-radius: 12px; border: 3px solid #00ffff; box-sizing: border-box; box-shadow: 0 0 15px #00ffff;">
+                </div>
+            </section>
             
-            <div style="margin-top: 20px; border-top: 1px dashed cyan; padding-top: 15px;">
-                <span style="color: deepskyblue; font-size: 16px; font-weight: bold; display: block; margin-bottom: 10px; text-shadow: 0 0 5px deepskyblue;">👇 Click & See QR to Pay Fees 👇</span>
-                <img src="B.jpg" alt="Paytm QR Code" style="width: 100%; max-width: 175px; height: auto; background: white; padding: 8px; border-radius: 12px; border: 3px solid cyan; box-sizing: border-box; box-shadow: 0 0 15px cyan;">
-            </div>
         </div>
-        
-    </div>
 
-    <div style="max-width: 600px; margin: 30px auto; background: rgba(255, 69, 0, 0.15); border: 2px dashed #FF4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.4); padding: 20px; border-radius: 15px; box-sizing: border-box;">
-        <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-shadow: 0 0 8px #ff4500; text-transform: uppercase;">⚠️ Important Notice ⚠️</h3>
-        <p style="font-size: 18px; color: white; font-weight: bold; margin: 10px 0;">You can learn driving only if you have your own car.</p>
-        <p style="font-size: 17px; color: #00ffff; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px #00ffff;">আপনার নিজের গাড়ি থাকলেই কেবল আপনি ড্রাইভিং শিখতে পারবেন।</p>
-        <p style="font-size: 17px; color: lime; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px lime;">यदि आपके पास अपनी कार है तभी आप driving सीख सकते हैं।</p>
-    </div>
-
-    <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; box-sizing: border-box;">
-        <div id="about" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed cyan; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
-            <h3 style="color: cyan; margin-top: 0; text-shadow: 0 0 5px cyan;">ℹ️ About Subrata Driving</h3>
-            <p style="font-size: 15px; line-height: 1.6; color: #ddd;">Welcome to Subrata Driving School, located at Ruby Park, Kolkata! We provide premium quality 15-day personal driving courses tailored to build your confidence on the road.</p>
+        <div style="max-width: 600px; margin: 30px auto; background: rgba(255, 69, 0, 0.2); border: 2px dashed #FF4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.4); padding: 20px; border-radius: 15px; box-sizing: border-box;">
+            <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-shadow: 0 0 8px #ff4500; text-transform: uppercase;">⚠️ Important Notice ⚠️</h3>
+            <p style="font-size: 18px; color: white; font-weight: bold; margin: 10px 0;">You can learn driving only if you have your own car.</p>
+            <p style="font-size: 17px; color: #00ffff; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px #00ffff;">আপনার নিজের গাড়ি থাকলেই কেবল আপনি ড্রাইভিং শিখতে পারবেন।</p>
+            <p style="font-size: 17px; color: #00ff00; font-weight: bold; margin: 10px 0; text-shadow: 0 0 5px #00ff00;">यदि आपके पास अपनी कार है तभी आप driving सीख सकते हैं।</p>
         </div>
-        
-        <div id="privacy" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.85); border: 2px dashed #FF6600; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
-            <h3 style="color: #FF6600; margin-top: 0; text-shadow: 0 0 5px #FF6600;">🔒 Website Privacy Policy</h3>
-            <p style="font-size: 14px; line-height: 1.6; color: #ddd;">This Privacy Policy applies to our official web platform <strong>s.dnc.su</strong>. We respect your privacy and state that this website does NOT track users, use cookies, or request any personal data. It is a secure, informational landing page created by Shubhomoy to connect clients directly via secure call and WhatsApp protocols.</p>
-        </div>
-    </div>
 
-    <div id="appFooter" style="margin-top: 50px; padding: 30px 10px; background: rgba(0,0,0,0.9); border-top: 5px solid #FF6600; box-shadow: 0 -5px 15px #FF6600; transition: all 0.5s ease;">
-        <span style="font-size: 13px; color: deepskyblue; letter-spacing: 2px; font-weight: bold; text-transform: uppercase; text-shadow: 0 0 5px deepskyblue;">
+        <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; box-sizing: border-box;">
+            <section id="about" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 2px dashed #00ffff; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
+                <h3 style="color: #00ffff; margin-top: 0; text-shadow: 0 0 5px #00ffff;">ℹ️ About Subrata Driving</h3>
+                <p style="font-size: 15px; line-height: 1.6; color: #eee;">Welcome to Subrata Driving School, located at Ruby Park, Kolkata! We provide premium quality 15-day personal driving courses tailored to build your confidence on the road.</p>
+            </section>
+            
+            <section id="privacy" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 2px dashed #FF6600; padding: 20px; border-radius: 15px; text-align: left; box-sizing: border-box;">
+                <h3 style="color: #FF6600; margin-top: 0; text-shadow: 0 0 5px #FF6600;">🔒 Website Privacy Policy</h3>
+                <p style="font-size: 14px; line-height: 1.6; color: #eee;">This Privacy Policy applies to our official web platform <strong>s.dnc.su</strong>. We respect your privacy and state that this website does NOT track users, use cookies, or request any personal data. It is a secure, informational landing page created by Shubhomoy to connect clients directly via secure call and WhatsApp protocols.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer id="appFooter" style="margin-top: 50px; padding: 30px 10px; background: rgba(0,0,0,0.95); border-top: 5px solid #FF6600; box-shadow: 0 -5px 15px #FF6600; transition: all 0.5s ease;">
+        <span style="font-size: 13px; color: #00bfff; letter-spacing: 2px; font-weight: bold; text-transform: uppercase; text-shadow: 0 0 5px #00bfff;">
             This Web Developed by Shubhomoy (sg)
         </span>
-    </div>
+    </footer>
 
     <audio id="welcomeSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
 
@@ -102,19 +107,20 @@
         if (currentThemeIndex === 0) {
             body.style.backgroundImage = "url('A.jpg')";
             body.style.backgroundColor = "transparent";
-            mainTitle.style.textShadow = "0 0 20px cyan, 0 0 40px #FF6600";
+            mainTitle.style.color = "#00ffff";
+            mainTitle.style.textShadow = "0 0 20px #00ffff, 0 0 40px #FF6600";
             courseBox.style.border = "3px solid #FF6600";
             courseBox.style.boxShadow = "0 0 15px #FF6600";
-            contactBox.style.border = "3px solid cyan";
-            contactBox.style.boxShadow = "0 0 15px cyan";
+            contactBox.style.border = "3px solid #00ffff";
+            contactBox.style.boxShadow = "0 0 15px #00ffff";
             footer.style.borderTop = "5px solid #FF6600";
             footer.style.boxShadow = "0 -5px 15px #FF6600";
             alert("Theme 1: Original Background!");
         } else if (currentThemeIndex === 1) {
             body.style.backgroundImage = "none";
             body.style.backgroundColor = "#0b0c10";
-            mainTitle.style.color = "cyan";
-            mainTitle.style.textShadow = "0 0 15px cyan, 0 0 30px #FF6600";
+            mainTitle.style.color = "#00ffff";
+            mainTitle.style.textShadow = "0 0 15px #00ffff, 0 0 30px #FF6600";
             alert("Theme 2: Cyberpunk Dark Neon!");
         } else if (currentThemeIndex === 2) {
             body.style.backgroundImage = "none";
