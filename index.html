@@ -7,8 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Subrata Driving School - Premium 15-day personal driving courses nearby Ruby Park, Kasba, and Bospukur, Kolkata. Learn driving safely with your own car!">
     <title>Subrata Driving</title>
+    <style>
+        #appBody {
+            margin: 0; 
+            padding: 0; 
+            background: url('A.jpg') no-repeat center center fixed; 
+            background-size: cover; 
+            color: white; 
+            font-family: sans-serif; 
+            text-align: center; 
+            transition: all 0.5s ease;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
-<body id="appBody" style="margin: 0; padding: 0; background-image: url('A.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; color: white; font-family: sans-serif; text-align: center; transition: all 0.5s ease;">
+<body id="appBody">
 
     <header style="background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid #FF6600; padding: 6px 12px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(255, 102, 0, 0.3);">
         <div style="font-size: 16px; font-weight: bold; color: #00ffff; text-shadow: 0 0 5px #00ffff; display: flex; align-items: center; gap: 5px;">
@@ -18,7 +34,10 @@
             <a href="#about" style="color: white; text-decoration: none; font-weight: bold; font-size: 12px; padding: 2px 4px;">About</a>
             <a href="#privacy" style="color: white; text-decoration: none; font-weight: bold; font-size: 12px; padding: 2px 4px;">Privacy</a>
             <button onclick="toggleTheme()" aria-label="Change Website Theme" style="background: #FF6600; color: white; border: none; padding: 5px 10px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 11px; box-shadow: 0 0 5px #FF6600;">🎨 Theme</button>
-            <a href="https://github.com/s07114587-ops/subratadriving/releases" target="_blank" aria-label="Download APK from GitHub" style="background: #00FF00; color: black; text-decoration: none; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 11px; box-shadow: 0 0 5px #00FF00;">📥 APK</a>
+            
+            <div id="apk-btn-container" style="display: inline-block;">
+                <a href="https://github.com/s07114587-ops/subratadriving/releases" target="_blank" aria-label="Download APK from GitHub" style="background: #00FF00; color: black; text-decoration: none; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 11px; box-shadow: 0 0 5px #00FF00;">📥 APK</a>
+            </div>
         </nav>
     </header>
 
@@ -47,7 +66,7 @@
             <section id="contactBox" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 3px solid #00ffff; box-shadow: 0 0 15px #00ffff; padding: 25px 15px; border-radius: 20px; box-sizing: border-box; transition: all 0.5s ease;">
                 <h2 id="contactTitle" style="color: #00ff00; margin-top: 0; text-shadow: 0 0 5px #00ff00;">📞 Contact Us</h2>
                 
-                <a href="https://wa.me/918420478930" target="_blank" style="display: block; color: white; text-decoration: none; padding: 12px; margin: 8px auto; border-radius: 10px; font-weight: bold; font-size: 16px; background: #006400; border: 1px solid #00ff00; box-shadow: 0 0 8px #00ff00;">
+                <a href="https://wa.me/918420478930?text=hey%20bro%20I%20want%20to%20learn%20driving%20my%20phon%20number%20is-%20%2B91" target="_blank" style="display: block; color: white; text-decoration: none; padding: 12px; margin: 8px auto; border-radius: 10px; font-weight: bold; font-size: 16px; background: #006400; border: 1px solid #00ff00; box-shadow: 0 0 8px #00ff00;">
                     🟢 Chat on WhatsApp
                 </a>
                 
@@ -83,7 +102,7 @@
 
         <div style="max-width: 1100px; margin: 30px auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; box-sizing: border-box;">
             <section id="about" style="flex: 1; min-width: 280px; background: rgba(0, 0, 0, 0.9); border: 2px dashed #00ffff; padding: 15px; border-radius: 15px; text-align: left; box-sizing: border-box;">
-                <h3 style="color: #00ffff; margin-top: 0; text-shadow: 0 0 5px #00ffff;">ℹ *ℹ️ About Subrata Driving*</h3>
+                <h3 style="color: #00ffff; margin-top: 0; text-shadow: 0 0 5px #00ffff;">ℹ️ About Subrata Driving</h3>
                 <p style="font-size: 14px; line-height: 1.6; color: #eee;">Welcome to Subrata Driving School! Located near Ruby Park, Kasba, and Bospukur, Kolkata, we provide premium quality 15-day personal driving courses tailored to build your confidence on the road safely using your own vehicle.</p>
             </section>
             
@@ -98,20 +117,11 @@
         <span style="font-size: 12px; color: #00bfff; letter-spacing: 2px; font-weight: bold; text-transform: uppercase; text-shadow: 0 0 5px #00bfff;">
             This Web Developed by Shubhomoy (sg)
         </span>
-    </footer>
+    </header>
 
     <audio id="welcomeSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-84.wav" preload="auto"></audio>
 
-<style>
-    /* পপ-আপ আসার স্টাইলিশ অ্যানিমেশন */
-    @keyframes zoomIn {
-        from { transform: scale(0.7); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-</style>
-
 <script>
-    // QR কোড পপ-আপ ফাংশন ভাই
     function openQRModal() {
         document.getElementById('qrModal').style.display = 'flex';
     }
@@ -130,8 +140,8 @@
         currentThemeIndex = (currentThemeIndex + 1) % 4;
 
         if (currentThemeIndex === 0) {
-            body.style.backgroundImage = "url('A.jpg')";
-            body.style.backgroundColor = "transparent";
+            body.style.background = "url('A.jpg') no-repeat center center fixed";
+            body.style.backgroundSize = "cover";
             mainTitle.style.color = "#00ffff";
             mainTitle.style.textShadow = "0 0 20px #00ffff, 0 0 40px #FF6600";
             courseBox.style.border = "3px solid #FF6600";
@@ -142,14 +152,12 @@
             footer.style.boxShadow = "0 -4px 12px #FF6600";
             alert("Theme 1: Original Background!");
         } else if (currentThemeIndex === 1) {
-            body.style.backgroundImage = "none";
-            body.style.backgroundColor = "#0b0c10";
+            body.style.background = "#0b0c10";
             mainTitle.style.color = "#00ffff";
             mainTitle.style.textShadow = "0 0 15px #00ffff, 0 0 30px #FF6600";
             alert("Theme 2: Cyberpunk Dark Neon!");
         } else if (currentThemeIndex === 2) {
-            body.style.backgroundImage = "none";
-            body.style.backgroundColor = "#000000";
+            body.style.background = "#000000";
             mainTitle.style.color = "#00FF00";
             mainTitle.style.textShadow = "0 0 15px #00FF00";
             courseBox.style.border = "3px solid #00FF00";
@@ -160,8 +168,7 @@
             footer.style.boxShadow = "0 -4px 12px #00FF00";
             alert("Theme 3: Matrix Hacker Green!");
         } else if (currentThemeIndex === 3) {
-            body.style.backgroundImage = "none";
-            body.style.backgroundColor = "#1a1c2e";
+            body.style.background = "#1a1c2e";
             mainTitle.style.color = "#FFD700";
             mainTitle.style.textShadow = "0 0 15px #FFD700";
             courseBox.style.border = "3px solid #FFD700";
@@ -185,6 +192,17 @@
     }
     document.addEventListener('click', playWelcomeSound);
     document.addEventListener('touchstart', playWelcomeSound);
+
+    // অ্যাপ এবং ওয়েবের মধ্যে পার্থক্য নির্ধারণ করে বাটন হাইড করার লজিক
+    window.addEventListener('load', function() {
+        // যদি ইউজার উইন্ডোটি কোনো অ্যান্ড্রয়েড WebView বা অ্যাপ পরিবেশের ভেতর থাকে
+        if (navigator.userAgent.includes("wv") || /Android/i.test(navigator.userAgent)) {
+            var apkButton = document.getElementById('apk-btn-container');
+            if (apkButton) {
+                apkButton.style.display = 'none'; // অ্যাপের ভেতর বাটনটি হাইড হবে, কিন্তু রিবন থাকবে
+            }
+        }
+    });
 </script>
 </body>
 </html>
